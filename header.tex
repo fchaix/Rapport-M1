@@ -1,0 +1,27 @@
+\usepackage{fontspec}
+%\setmainfont[Mapping=tex-text, Ligatures=Historical, Numbers=OldStyle]{Linux
+%Libertine O}
+\usepackage{lipsum} % Pour insérer le traditionnel lorem ipsum (utilisé pour test)
+\usepackage{blindtext} % Pour insérer des textes à la con (utilisé pour test)
+\usepackage{polyglossia} % Gestion avancée de la typo selon le langage configuré
+    \setmainlanguage{french}
+\usepackage{fancyhdr} % Pour de jolis hauts de page
+\usepackage[version=3]{mhchem} % Pour les formules et équations chimiques
+\usepackage{cancel} % Pour barrer les éléments simplifiés dans une équation
+\usepackage[a4paper, bottom=3cm, right=4.5cm]{geometry} % Package pour régler finement les marges/entête/pied de page.
+\usepackage{url} % Comme son nom l’indique, ça sert à insérer des URL clicables.
+%\usepackage[draft]{graphicx}
+% L’ajout de ce package fait arriver une erreur. TODO : Chercher d’où elle vient…
+
+\setcounter{tocdepth}{3} % Profondeur de la table des matières.
+\setdefaultlanguage{french} % Je ne sais pas s'il n'y a pas redondance avec
+\setmainlanguage{french}
+
+\pagestyle{fancy} % Style de l'entête (template pré-défini)
+
+
+\input{macros} % Fonctions maison.
+
+
+\title{Master 1 \textsc{Écosciences, Microbiologie}} % Pas vraiment besoin de commentaires…
+% Note : regarder si il ne faiiait pas plutôt le mettre après le \begin{document}

@@ -1,0 +1,36 @@
+% Je ne sais plus à quoi servent ces lignes. C'est sans doute une histoire de
+% marge et de taille de la police des notes dans la marge.
+\setlength{\marginparwidth}{3.5cm}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]
+{\raggedright\footnotesize #1}}
+
+% Création d'un environement pour les anecdotes.
+% TODO : En créer d'autres (remarques, exemples, démonstrations...) et les
+% mettre dans un fichier à insérer en input plutôt que de surcharger celui-là.
+\newenvironment{anecdote}
+   {\begin{quote} \small}
+   {\normalsize \end{quote}}
+% environement d’exemple :
+\newenvironment{exemple}
+   {\begin{quote} \small}
+   {\normalsize \end{quote}}
+
+% Une commande qui sert pour le moment à rien, pour stocker le nom du prof
+\newenvironment{rmq}{$\Rightarrow$}{$\diamondsuit$}
+\newcommand{\prof}[1]{}
+
+\newcommand{\esp}[1]{\textit{#1}} % Commande pour stocker les noms d’espèces.
+
+\newcommand{\definition}[2][1]{\paragraph{\textsc{#1}~:} #2}
+
+% Commande pour mettre du texte en indice
+\makeatletter
+\DeclareRobustCommand*\down[1]{%
+\@textsubscript{\selectfont#1}}
+\def\@textsubscript#1{%
+{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
+\makeatother
+% Pareil pour l’exposant, sauf que c’est plus simple.
+\newcommand{\up}[1]{\textsuperscript{#1}}
+

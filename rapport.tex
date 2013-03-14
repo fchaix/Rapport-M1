@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Important : Ces sources sont prévues pour être compilées avec XeTeX.
+% Testé avec Texlive 2012.
+% Encodage du texte en UTF-8
+% Auteur : François Chaix <francois.chaix@etu.univ-lyon1.fr>
+% Vous pouvez faire ce que vous voulez avec ce document et ce code, je le place
+% sous la licence CC0 (https://creativecommons.org/publicdomain/zero/1.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt, linktocpage=true, oneside]{memoir}
+\usepackage{polyglossia}
+	\setdefaultlanguage{french}
+\renewcommand{\baselinestretch}{1.5}
+\setmainfont[Mapping=tex-text]{Linux Libertine}
+\usepackage{lipsum}
+\usepackage[%
+    hidelinks=true
+    colorlinks=false
+    pdfauthor={François Chaix},
+    pdftitle={Rapport de stage M1 François Chaix},
+    pdfsubject={Dynamique des éléments transposables chez l'endosymbionte Wolbachia},
+    pdfkeywords={Wolbachia, Transposon-display, Drosophila, parasite, endoparasite, symbiose, Leptopilina heterotoma},
+    pdfproducer={XeteX, avec le package hyperref},
+    pdfcreator={Xelatex}]{hyperref}
+%\usepackage[sorting=none, backend=biber, style=nature]{biblatex}
+%\bibliography{bib}
+\usepackage[style=aem, natbib=true, backend=biber]{biblatex}
+\addbibresource{bib}
+
+%\usepackage[Bjornstrup]{fncychap} % Ça c'était pour quand j'utilisais la classe report
+\chapterstyle{hangnum}
+
+\input{pagedegarde}
+\input{macros}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introduction}
+\input{intro}
+
+\chapter{Matériel et méthodes}
+\input{mm}
+
+\chapter{Discussion}
+\input{discussion}
+
+\printbibliography
+
+\newpage
+\pagestyle{empty}
+\renewcommand{\baselinestretch}{1} % Pour enlever l'interligne 1.5
+\begin{abstract}
+Ceci est un résumé qu'il est trop bien.
+
+À imprimer à part, pour l'intégrer à la quatrième de converture.
+
+Peut-être le compiler à part, dans un autre fichier. On verra.
+\end{abstract}
+\end{document}
