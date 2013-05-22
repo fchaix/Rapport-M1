@@ -8,10 +8,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper, 12pt, linktocpage=true, oneside]{memoir}
+%\renewcommand{{\baselinestretch}}{1.5}
+\renewcommand{\baselinestretch}{1.5}
 \usepackage{polyglossia}
 	\setdefaultlanguage{french}
-\renewcommand{\baselinestretch}{1.5}
-\setmainfont[Mapping=tex-text]{Linux Libertine}
+
+% \setmainfont[Mapping=tex-text]{Linux Libertine}
+\usepackage{libertine}
 \usepackage{lipsum}
 \usepackage[%
     hidelinks=true
@@ -25,13 +28,19 @@
 %\usepackage[sorting=none, backend=biber, style=nature]{biblatex}
 %\bibliography{bib}
 \usepackage[style=aem, natbib=true, backend=biber]{biblatex}
-\addbibresource{bib}
+\addbibresource{bib.bib}
 
 %\usepackage[Bjornstrup]{fncychap} % Ça c'était pour quand j'utilisais la classe report
 \chapterstyle{hangnum}
 
-\input{pagedegarde}
+\newenvironment{encart} 
+   {\begin{quote} \footnotesize \renewcommand{\baselinestretch}{0}} 
+   {\normalsize \end{quote}} 
+
+%\input{pagedegarde}
 \input{macros}
+\title{Étude des transferts horizontaux de l’endosymbionte \textit{Wolbachia} par la méthode du Transposon Display}
+\author{François \textsc{Chaix}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
@@ -43,7 +52,7 @@
 \chapter{Matériel et méthodes}
 \input{mm}
 
-\chapter{Discussion}
+\chapter{Résultats \& Discussion}
 \input{discussion}
 
 \printbibliography
@@ -54,7 +63,7 @@
 \begin{abstract}
 Ceci est un résumé qu'il est trop bien.
 
-À imprimer à part, pour l'intégrer à la quatrième de converture.
+À imprimer à part, pour l'intégrer à la quatrième de couverture.
 
 Peut-être le compiler à part, dans un autre fichier. On verra.
 \end{abstract}
