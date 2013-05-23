@@ -9,25 +9,25 @@
 		\begin{center}
 		\begin{tabular}{|c|c|c|}
 			\hline
-				&Déjà testées&Nouvelles\\
+									&Déjà testées				&Nouvelles\\
 			\hline
-			\esp{D. simulans} (wRi)&Japon (Tokyo)&Botswana\\
-				&France (Grand Ferrade)&Afrique du Sud\\
-				&Portugal (Chicharo)& \\
-				&Mozambique (Chimoio)& \\
+			\esp{D. simulans} (wRi)	&Japon (Tokyo)				&Botswana\\
+									&France (Grand Ferrade)		&Afrique du Sud\\
+									&Portugal (Chicharo)		& \\
+									&Mozambique (Chimoio)		& \\
 			\hline
-			\esp{D. melanogaster} (wMel)& USA (Seattle) & Botswanna (4 sites)\\
-				&Pérou&Zimbabwe\\
-				&Madagascar& \\
+			\esp{D. melanogaster} (wMel)& USA (Seattle) 		& Botswanna (4 sites)\\
+									&Pérou						&Zimbabwe\\
+									&Madagascar					& \\
 			\hline
-			\esp{D. auraria} (wAur)& Terrain (1 échantillon)&1 lignée\\
+			\esp{D. auraria} (wAur)	& Terrain (1 échantillon)	&1 lignée\\
 			\hline
-			\esp{D. suzukii}&&France(6 sites)\\
-				& &Japon\\
+			\esp{D. suzukii}		&							&France(6 sites)\\
+									& 							&Japon\\
 			\hline
 		\end{tabular}
 		\end{center}
-		\caption{Tableau récapitulatif du plan d'échatillonnage.}
+		\caption{Tableau récapitulatif du plan d'échatillonnage. Note : À compléter avec les nouvelles bêtes testées}
 		\label{fig:tab1}
 	\end{figure}
 
@@ -36,28 +36,49 @@
 
 	\paragraph{\textit{L. heterotoma}} % (fold)
 	\label{par:hetero_mm}
-	\textit{L. heterotoma} étant dans la nature infectées par trois souches distinctes de \esp{Wolbachia}, il faut, pour typer celles-ci en Transposon-display, obtenir des lignées mono-infectées. Pour cela, nous appliquons une méthode basée sur des traitements antiiotiques ménagés, que nous décrivons en annexe, dans un souci de concision.
+	\textit{L. heterotoma} étant dans la nature infectées par trois souches distinctes de \esp{Wolbachia}, il faut, pour typer celles-ci en Transposon-display, obtenir des lignées mono-infectées. Pour cela, nous appliquons une méthode basée sur des traitements antibiotiques ménagés, que nous décrivons en annexe, dans un souci de concision.
 	% paragraph hetero_mm (end)
 
 % subsection échantillonnage (end)
 
 \subsection{Extractions d'ADN et statuts d'infection} % (fold)
 	Deux protocoles d'extractions d'ADN ont été suivies : 
-	Pour la vérification des statuts d'infection, les extractions ont été faites en suivant le protocole Chelex®, méthode peu coûteuse mais produisant un mélange non purifié.
+	Pour la vérification des statuts d'infection, les extractions ont été faites en suivant le protocole Chelex®, méthode peu coûteuse mais produisant un matériel non purifié.
 
 	L'efficacité de l'extraction a été vérifiée par le biais d'une PCR sur le gène \gene{Its2}, gène mitochondrien généraliste.
 
-	Pour les besoins en précision du protocole du transposon-display, des extractions d'ADN prosuisant de l'ADN purifié ont dû être pratiqués, en suivant le protocole du kit Machery Nagel®.
+	Pour les besoins en précision du protocole du transposon-display, des extractions d'ADN produisant de l'ADN purifié ont dû être pratiqués, en suivant le protocole du kit Machery Nagel®.
 
 	Les statuts d'infection ont été déterminés par PCR sur la base du gène \gene{FtsZ}\footnote{Amorces : FtsZ-F2/FtsZ-R2}.
 
 	Pour certains échantillons de drosophiles, l'espèce exacte n'était pas déterminée de façon certaine sur la base de la morphologie. Elle a donc été déterminée sur la base du séquençage du produit de la PCR du gène mitochondrial \gene{COI}\footnote{Amorces (TODO : regarder dans cahier de labo ☺)}, à partir des échantillons extraits au Chelex®.
 
-	Enfin, la carractérisation de la souche de la bactérie a été effectuée sur la base du gène \gene{wsp}\footnote{Amorces : TODO, y’en a plusieurs, voir lesquelles mettre là.}, connu pour sa variabilité au sein du genre \esp{Wolbachia}, fort utile pour le typage de la souche.
+	Puis, la carractérisation de la souche de la bactérie a été effectuée sur la base du gène \gene{wsp}\footnote{Amorces : TODO, y’en a plusieurs, voir lesquelles mettre là.}, connu pour sa variabilité au sein du genre \esp{Wolbachia}, fort utile pour le typage de la souche.
+
+	Enfin, la présence du transposon \textit{ISWpi1} a été testée par PCR avec les amorces ISWpi1-F/ISWpi1-R.
 
 \subsection{Transposon-display} % (fold)
 \label{sub:transposon_display}
-\begin{figure}[h]
+
+	\paragraph{Principe général} % (fold)
+	\label{par:principe_TnDisp}
+	Le transposon-display est une méthode de biologie moléculaire visant à établir un \textit{fingerprint} des locus d’insertion d’un transposon. Nous allons décrire ici brièvement son principe (voir le schéma \ref{fig:figure1})~:
+	\begin{enumerate}
+		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), séléctionné pour couper fréquemment, mais pas dans le transposon, dont la séquence est connue.
+		\item Des adaptateurs\footnote{Dessinés par HH, issus des traveaux de X} sont ensuite appliqués à cet ADN digéré, conçus pour être d’un côté complémentaires au motif de coupure de HindIII, et de l’autre pour ne pas être complémentaire sur la fin, afin de former un "Y" et d’éviter ainsi la circularisation.\footnote{Reformuler}
+		\item Nous nous retrouvons donc avec une série de fragments linéaires d’ADN de l’échantillon, flanqués de notre adaptateur, contenant pour certains le transposon qui nous intéresse (\textit{ISWpi2}).
+		\item L’étape finale consiste en deux PCR, avec comme amorce commune une amorce spécifique à l’adaptateur (La partie en "Y"), et l’autre soit à la partie 5’ du transposon (ISb), soit la partie 3’ (ISc).
+	\end{enumerate}
+	% Le résultat (renvoyer à figure gels) de cette PCR, après éléctrophorèse, nous donne un \textit{barcode} dans lequel chaque bande correspond à un locus d’insertion du transposon.
+	Après migration sur gel d’éléctrophorèse, nous obtenons un \textit{barcode}\footnote{À traduire ?} dans lequel chaque bande correspond à un locus d’insertion du transposon.
+	% paragraph principe_TnDisp (end)
+
+	\paragraph{Des nouveautés dans le protocole} % (fold)
+	\label{par:protocole2}
+	Ce stage a été l’occasion pour tester une nouvelle version du protocole du transposon-display, en particulier au niveau de la PCR, avec l’utilisation d’une Taq-polymérase haute fidélité (AccuTaq de la société Sigma), et l’ajustement en conséquence du programme de thermocycleur.
+	% paragraph protocole2 (end)
+
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=160mm]{tdisplay.png}
 	\end{center}
@@ -67,3 +88,8 @@ flanquantes des insertions. Figure povenant du mémoire de Hélène \textsc{Henr
 \end{figure}
 
 % subsection transposon_display (end)
+
+\subsection{Traitement informatique} % (fold)
+\label{sub:traitement_info}
+TODO
+% subsection traitement_info (end)
