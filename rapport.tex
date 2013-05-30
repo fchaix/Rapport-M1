@@ -31,11 +31,16 @@
     pdfcreator={Xelatex}]{hyperref}
 %\usepackage[sorting=none, backend=biber, style=nature]{biblatex}
 %\bibliography{bib}
+
+% Le style bibliographique AEM a été pris ici : https://github.com/roey-angel/BIBEMME
+% Merci à Roey-Angel pour ce partage.
 \usepackage[style=aem, natbib=true, backend=biber]{biblatex}
 \addbibresource{bib.bib}
 
 %\usepackage[Bjornstrup]{fncychap} % Ça c'était pour quand j'utilisais la classe report
-\chapterstyle{hangnum}
+%\chapterstyle{hangnum} % DUne marge un peu trop grande pour les titres. Ce qu'il faut pas faire pour grater des pages, avec cette limitation de m****...
+\chapterstyle{article}
+\setsecnumdepth{subsection}
 
 \newenvironment{encart} 
    {\begin{quote} \footnotesize \renewcommand{\baselinestretch}{0}} 
