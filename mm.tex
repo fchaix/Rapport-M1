@@ -51,13 +51,13 @@
 
 	L'efficacité de l'extraction a été vérifiée par le biais d'une PCR sur le gène \gene{Its2}, gène mitochondrien généraliste.
 
-	Pour les besoins en précision du protocole du transposon-display, des extractions d'ADN produisant de l'ADN purifié ont dû être pratiqués, en suivant le protocole du kit Machery Nagel®.
+	Pour les besoins en précision du protocole du transposon-display, des extractions d'ADN produisant de l'ADN purifié ont dû être pratiqués, en suivant le protocole du kit \textit{NucleSpin® Tissue} de l’entreprise Macherey-Nagel.
 
 	Les statuts d'infection ont été déterminés par PCR sur la base du gène \gene{FtsZ}\footnote{Amorces : FtsZ-F2/FtsZ-R2}.
 
-	Pour certains échantillons de drosophiles, l'espèce exacte n'était pas déterminée de façon certaine sur la base de la morphologie. Elle a donc été déterminée sur la base du séquençage du produit de la PCR du gène mitochondrial \gene{COI}\footnote{Amorces (TODO : regarder dans cahier de labo ☺)}, à partir des échantillons extraits au Chelex®.
+	Pour certains échantillons de drosophiles, l'espèce exacte n'était pas déterminée de façon certaine sur la base de la morphologie. Elle a donc été déterminée sur la base du séquençage du produit de la PCR du gène mitochondrial \gene{COI}\footnote{Amorces~: LCO/HCO}, à partir des échantillons extraits au Chelex®.
 
-	Puis, la caractérisation de la souche de la bactérie a été effectuée sur la base du gène \gene{wsp}\footnote{Amorces : TODO, y’en a plusieurs, voir lesquelles mettre là.}, connu pour sa variabilité au sein du genre \esp{Wolbachia}, fort utile pour le typage de la souche.
+	Puis, la caractérisation de la souche de la bactérie a été effectuée sur la base du gène \gene{wsp}\footnote{Amorces : 81F/2R}, connu pour sa variabilité au sein du genre \esp{Wolbachia}, fort utile pour le typage de la souche.
 
 	Enfin, la présence du transposon \textit{ISWpi1} a été testée par PCR avec les amorces ISWpi1-F/ISWpi1-R.
 
@@ -70,8 +70,8 @@
 	Elle est tirée de la méthode ASAP (Allele-Specific Alu PCR)\cite{ASAP}.
 	Nous allons décrire ici brièvement son principe (voir le schéma \ref{fig:figure1})~:
 	\begin{enumerate}
-		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), séléctionné pour couper fréquemment, mais pas dans le transposon, dont la séquence est connue.
-		\item Des adaptateurs\footnote{Dessinés par HH, issus des traveaux de X} sont ensuite appliqués à cet ADN digéré, conçus pour être d’un côté complémentaires au motif de coupure de HindIII, et de l’autre pour ne pas être complémentaire sur la fin, afin de former un "Y" et d’éviter ainsi la circularisation.\footnote{Reformuler}
+		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), séléctionné pour couper fréquemment, mais pas dans le transposon.
+		\item Des adaptateurs\footnote{Dessinés par Hélène \textsc{Henri}, décrits dans son mémoire \cite{memHH}} sont ensuite appliqués à cet ADN digéré, conçus pour être d’un côté complémentaires au motif de coupure de HindIII, et de l’autre pour ne pas être complémentaire sur la fin, afin de former un "Y" et d’éviter ainsi la circularisation.
 		\item Nous nous retrouvons donc avec une série de fragments linéaires d’ADN de l’échantillon, flanqués de notre adaptateur, contenant pour certains le transposon qui nous intéresse (\textit{ISWpi2}).
 		\item L’étape finale consiste en deux PCR, avec comme amorce commune une amorce spécifique à l’adaptateur (La partie en "Y"), et l’autre soit à la partie 5’ du transposon (ISb), soit la partie 3’ (ISc).
 	\end{enumerate}
@@ -89,8 +89,8 @@
 		\includegraphics[width=160mm]{tdisplay.png}
 	\end{center}
 	\caption{Principe du Transposon Display avec amplification sélective des régions
-flanquantes des insertions. Figure povenant du mémoire de Hélène \textsc{Henri}\cite{memHH}% Là j'aimerais bien footciter, mais y'a un bug connu quand on footnote des trucs depuis une caption :(
-	)}
+flanquantes des insertions. Figure povenant du mémoire de Hélène \textsc{Henri}\cite{memHH}.% Là j'aimerais bien footciter, mais y'a un bug connu quand on footnote des trucs depuis une caption :(
+	}
 	\label{fig:figure1}
 \end{figure}
 
