@@ -31,7 +31,7 @@
 			\hline
 		\end{tabular}
 		\end{center}
-		\caption{Tableau récapitulatif de la répartition spatiale des échantillons de drosophiles, ainsi que du nom de leurs \esp{Wolbachia} associées. En tout, 54 échantillons ont été typés en transposon-display. La colonne «déjà testées» liste la répartition des échantillons ayant déjà été testés lors des traveaux de Hélène \textsc{Henri}\cite{memHH}, avec l’ancienne version du protocole (Cf. partie \ref{}), et la colonne «nouvelle» correspond aux nouvelles lignées testées lors de ce stage, avec la nouvelle version du protocole.}
+		\caption{Tableau récapitulatif de la répartition spatiale des échantillons de drosophiles, ainsi que du nom de leurs \esp{Wolbachia} associées. En tout, 54 échantillons ont été typés en transposon-display. La colonne «déjà testées» liste la répartition des échantillons ayant déjà été testés lors des traveaux de Hélène \textsc{Henri}\cite{memHH}, avec l’ancienne version du protocole (Cf. partie \ref{sec:transposon_display}), et la colonne «nouvelle» correspond aux nouvelles lignées testées lors de ce stage, avec la nouvelle version du protocole.}
 		\label{fig:tab1}
 	\end{figure}
 
@@ -45,20 +45,18 @@
 % subsection échantillonnage (end)
 
 \section{Extractions d'ADN et statuts d'infection} % (fold)
-	Deux protocoles d'extractions d'ADN ont été suivies : 
-	Pour la vérification des statuts d'infection, les extractions ont été faites en suivant le protocole Chelex®, méthode peu coûteuse mais produisant un matériel non purifié.
+L’ADN génomique des échantillons de drosophiles a été extrait au moyen du kit d’extraction \textit{NucleoSpin® Tissue}, de l’entreprise Macherey-Nagel.
+Ce kit nous permet d’avoir un ADN purifié, certaines étapes de la technique du transposon-display étant très sensibles aux divers inhibiteurs que l’on pourrait trouver dans des échantillons extraits avec des protocoles plus simples.
 
-	L'efficacité de l'extraction a été vérifiée par le biais d'une PCR sur le gène \gene{Its2}, gène mitochondrien généraliste.
+L’efficacité des extractions a été vérifié par PCR sur la base du gène mitochondrial \textit{Its2}, gène très généraliste. Pour cette PCR, un extrait issu d’une extraction antérieure a été pris comme témoin positif.
 
-	Pour les besoins en précision du protocole du transposon-display, des extractions d'ADN produisant de l'ADN purifié ont dû être pratiqués, en suivant le protocole du kit \textit{NucleSpin® Tissue} de l’entreprise Macherey-Nagel.
+Les statuts d’infection ont été déterminés sur la base du gène \textit{Fts-Z}, spécifique de \esp{Wolbachia}. Nous avons pris un extrait issu d’une autre extraction, dont le statut d’infection était connu comme étant positif comme témoin positif, et un extrait d’une drosophile traitée par antibiotique, vérifiée comme étant exempte de \esp{Wolbachia} comme témoin négatif.
 
-	Les statuts d'infection ont été déterminés par PCR sur la base du gène \gene{FtsZ}\footnote{Amorces : FtsZ-F2/FtsZ-R2}.
+Pour les échantillons positifs sur \textit{Fts-Z} (donc inféctés par Wolbachia), nous avons effectué un séquencage du gène \textit{wsp} afin de déterminer la souche de \esp{Wolbachia}.
 
-	Pour certains échantillons de drosophiles, l'espèce exacte n'était pas déterminée de façon certaine sur la base de la morphologie. Elle a donc été déterminée sur la base du séquençage du produit de la PCR du gène mitochondrial \gene{COI}\footnote{Amorces~: LCO/HCO}, à partir des échantillons extraits au Chelex®.
+% Parler de COI ssi y’a assez de place.
 
-	Puis, la caractérisation de la souche de la bactérie a été effectuée sur la base du gène \gene{wsp}\footnote{Amorces : 81F/2R}, connu pour sa variabilité au sein du genre \esp{Wolbachia}, fort utile pour le typage de la souche.
-
-	Enfin, la présence du transposon \textit{ISWpi1} a été testée par PCR avec les amorces ISWpi1-F/ISWpi1-R.
+Enfin, la présence du transposon \textit{ISWpi1}, utilisé pour le transposon-display, a été vérifié par PCR avec les amorces ISWpi1-F/ISWpi1-R.
 
 \section{Transposon-display} % (fold)
 \label{sec:transposon_display}
@@ -66,11 +64,14 @@
 	\paragraph{Principe général} % (fold)
 	\label{par:principe_TnDisp}
 	Le transposon-display est une méthode de biologie moléculaire visant à établir un \textit{fingerprint} des locus d’insertion d’un transposon. 
-	Elle est tirée de la méthode ASAP (Allele-Specific Alu PCR)\cite{ASAP}.
+	Elle est tirée de la méthode ASAP (Allele-Specific Alu PCR)\cite{ASAP}, et adapté au contexte \esp{Wolbachia}/\textit{ISWpi1} par Hélène \textsc{Henri}\cite{memHH}.\\
 	Nous allons décrire ici brièvement son principe (voir le schéma \ref{fig:figure1})~:
 	\begin{enumerate}
-		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), séléctionné pour couper fréquemment, mais pas dans le transposon.
-		\item Des adaptateurs\footnote{Dessinés par Hélène \textsc{Henri}, décrits dans son mémoire \cite{memHH}} sont ensuite appliqués à cet ADN digéré, conçus pour être d’un côté complémentaires au motif de coupure de HindIII, et de l’autre pour ne pas être complémentaire sur la fin, afin de former un "Y" et d’éviter ainsi la circularisation.
+		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), séléctionné pour couper de façon fréquente le génome, mais n’ayant pas son motif de coupure dans le transposon.
+		\item Des adaptateurs
+		%\footnote{Dessinés par Hélène \textsc{Henri}, décrits dans son mémoire \cite{memHH}}
+		% Je pense qu’on aura compris ^^
+		sont ensuite appliqués à cet ADN digéré, conçus pour être d’un côté complémentaires au motif de coupure de HindIII, et de l’autre pour ne pas être complémentaire sur la fin, afin de former un "Y" et d’éviter ainsi la circularisation.
 		\item Nous nous retrouvons donc avec une série de fragments linéaires d’ADN de l’échantillon, flanqués de notre adaptateur, contenant pour certains le transposon qui nous intéresse (\textit{ISWpi2}).
 		\item L’étape finale consiste en deux PCR, avec comme amorce commune une amorce spécifique à l’adaptateur (La partie en "Y"), et l’autre soit à la partie 5’ du transposon (ISb), soit la partie 3’ (ISc).
 	\end{enumerate}
