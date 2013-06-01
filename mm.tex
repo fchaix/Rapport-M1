@@ -1,9 +1,9 @@
 \section{Échantillonnage} % (fold)
 \label{sec:échantillonnage}
 
-	Nous échantillonnons des souches de \esp{Wolbachia} appartenant à des groupes intra-spécifiques identiques sur la base du gène-marqueur \textit{wsp}, un gène dont la variabilité est suffisante pour distinguer des groupes à l'échelle intra-spécifique. Ces groupes sont nommés en général en fonction de leur hôte (\esp{wMel} est la bactérie infectant la drosophile \esp{Drosophila melanogaster} par exemple).
+	Nous échantillonnons des souches de \esp{Wolbachia} appartenant à des groupes intra-spécifiques identiques sur la base du gène-marqueur \textit{wsp}, gène dont la variabilité est suffisante pour distinguer des groupes à l'échelle intra-spécifique. Ces groupes sont nommés en général en fonction de leur hôte ---~\esp{wMel} est la bactérie infectant la drosophile \esp{Drosophila melanogaster} par exemple~---.
 
-	Notons parmi ces souches que l'on peut ensuite les regrouper dans des groupes encore plus homogènes, car contenant des bactéries identiques sur la base de la concaténation de plusieurs séquences hautement variables à la manière de \textit{wsp}.
+	Notons que l'on peut ensuite regrouper ces souches dans des groupes encore plus homogènes, car contenant des bactéries identiques sur la base de la concaténation de plusieurs séquences hautement variables, à la manière de \textit{wsp}. % Cette phrase est lourde, il faudrait éventuellement reformuler.
 	C'est le cas par exemple de \esp{wRi} et de \esp{wAur}, qui formeront un groupe que nous appellerons \esp{wRi-like}.
 	\begin{figure}[h]
 		\begin{center}
@@ -48,15 +48,15 @@
 L'ADN génomique des échantillons de drosophiles a été extrait au moyen du kit d'extraction \textit{NucleoSpin® Tissue}, de l'entreprise Macherey-Nagel.
 Ce kit nous permet d'avoir un ADN purifié, certaines étapes de la technique du transposon-display étant très sensibles aux divers inhibiteurs que l'on pourrait trouver dans des échantillons extraits avec des protocoles plus simples.
 
-L'efficacité des extractions a été vérifié par PCR sur la base du gène mitochondrial \textit{Its2}, gène très généraliste. Pour cette PCR, un extrait issu d'une extraction antérieure a été pris comme témoin positif.
+L'efficacité des extractions a été vérifiée par PCR sur la base du gène mitochondrial \textit{Its2}, gène très généraliste. Pour cette PCR, un extrait issu d'une extraction antérieure a été pris comme témoin positif.
 
-Les statuts d'infection ont été déterminés sur la base du gène \textit{Fts-Z}, spécifique de \esp{Wolbachia}. Nous avons pris un extrait issu d'une autre extraction, dont le statut d'infection était connu comme étant positif comme témoin positif, et un extrait d'une drosophile traitée par antibiotique, vérifiée comme étant exempte de \esp{Wolbachia} comme témoin négatif.
+Les statuts d'infection ont été déterminés sur la base du gène \textit{Fts-Z}, spécifique de \esp{Wolbachia}. Nous avons pris un extrait issu d'une autre extraction, dont on savait qu'il était infecté par \esp{Wolbachia} comme témoin positif, et un extrait d'une drosophile traitée par antibiotique, vérifiée comme étant exempte de \esp{Wolbachia}, en tant que témoin négatif.
 
-Pour les échantillons positifs sur \textit{Fts-Z} (donc infectés par Wolbachia), nous avons effectué un séquencage du gène \textit{wsp} afin de déterminer la souche de \esp{Wolbachia}.
+Pour les échantillons positifs sur \textit{Fts-Z} (donc infectés par Wolbachia), nous avons effectué un séquençage du gène \textit{wsp} afin de déterminer la souche de \esp{Wolbachia}.
 
 % Parler de COI ssi y'a assez de place.
 
-Enfin, la présence du transposon \textit{ISWpi1}, utilisé pour le transposon-display, a été vérifié par PCR avec les amorces ISWpi1-F/ISWpi1-R.
+Enfin, la présence du transposon \textit{ISWpi1}, utilisé pour le transposon-display, a été vérifiée par PCR avec les amorces ISWpi1-F/ISWpi1-R.
 
 \section{Transposon-display} % (fold)
 \label{sec:transposon_display}
@@ -67,14 +67,14 @@ Enfin, la présence du transposon \textit{ISWpi1}, utilisé pour le transposon-d
 	Elle est tirée de la méthode ASAP (Allele-Specific Alu PCR)\cite{ASAP}, et adapté au contexte \esp{Wolbachia}/\textit{ISWpi1} par Hélène \textsc{Henri}\cite{memHH}.\\
 	Nous allons décrire ici brièvement son principe (voir le schéma \ref{fig:figure1})~:
 	\begin{enumerate}
-		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), sélectionné pour couper de façon fréquente le génome, mais n'ayant pas son motif de coupure dans le transposon.
+		\item Le génome est digéré par une enzyme de restriction (ici, HindIII), sélectionnée pour couper de façon fréquente le génome, mais n'ayant pas son motif de coupure dans le transposon.
 		\item Des adaptateurs
 		%\footnote{Dessinés par Hélène \textsc{Henri}, décrits dans son mémoire \cite{memHH}}
 		% Je pense qu'on aura compris ^^
 		sont ensuite appliqués à cet ADN digéré, conçus pour être d'un côté complémentaires au motif de coupure de HindIII, et de l'autre pour ne pas être complémentaire sur la fin, afin de former un "Y" qui permettra d'éviter les amplifications non-spécifiques pour les fragments de petite taille.
 		%\item Nous nous retrouvons donc avec une série de fragments linéaires d'ADN de l'échantillon, flanqués de notre adaptateur, contenant pour certains le transposon qui nous intéresse (\textit{ISWpi2}).
 		% Ça c'est du langage oral, c'est déplacé.
-		\item L'étape finale consiste en deux PCR, avec comme amorce commune une amorce spécifique à l'adaptateur (La partie en "Y"), et l'autre soit à la partie 5' du transposon (ISb), soit la partie 3' (ISc).
+		\item L'étape finale consiste en deux PCR, avec comme amorce commune une amorce spécifique à l'adaptateur (la partie en "Y"), et l'autre soit à la partie 5' du transposon (ISb), soit la partie 3' (ISc).
 	\end{enumerate}
 	% Le résultat (renvoyer à figure gels) de cette PCR, après éléctrophorèse, nous donne un \textit{barcode} dans lequel chaque bande correspond à un locus d'insertion du transposon.
 	Après migration sur gel d'électrophorèse, nous obtenons un profil dans lequel chaque fragment correspond à un locus d'insertion du transposon.
@@ -89,7 +89,7 @@ Enfin, la présence du transposon \textit{ISWpi1}, utilisé pour le transposon-d
 	\begin{center}
 		\includegraphics[width=160mm]{tdisplay.png}
 	\end{center}
-	\caption{Principe du Transposon Display avec amplification sélective des régions
+	\caption{Principe du transposon display avec amplification sélective des régions
 flanquantes des insertions. Figure provenant du mémoire de Hélène \textsc{Henri}\cite{memHH}.% Là j'aimerais bien footciter, mais y'a un bug connu quand on footnote des trucs depuis une caption :(
 	}
 	\label{fig:figure1}
