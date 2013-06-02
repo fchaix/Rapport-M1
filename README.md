@@ -23,3 +23,5 @@ disponible dans toutes les distributions de LaTeX, comme la plus connue,
 TexLive.
 La bibliographie se compile avec biber.
 
+Veuillez compiler tout d’abord la page de garde (page.tex) avant de compiler
+rapport.tex
