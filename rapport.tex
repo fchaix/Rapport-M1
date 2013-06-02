@@ -10,8 +10,10 @@
 \documentclass[a4paper, 12pt, linktocpage=true, oneside]{memoir}
 %\renewcommand{{\baselinestretch}}{1.5}
 \renewcommand{\baselinestretch}{1.5}
-\usepackage{polyglossia}
-	\setdefaultlanguage{french}
+
+% \usepackage{polyglossia}  % Pas vraiment compatible avec LuaTeX
+%     \setdefaultlanguage{french}
+\usepackage[francais]{babel}	% Pour LuaTeX
 
 \usepackage{geometry}
 \geometry{hmargin=2.5cm,vmargin=2.5cm}
@@ -20,7 +22,7 @@
 \setmainfont[
     Mapping=tex-text,
     Numbers=OldStyle,
-    Ligatures={Common}
+    Ligatures={TeX, Common}
     ]
     {Linux Libertine}
 % \setmainfont{Times New Roman} % Non, décidément, c’est trop moche Times…
