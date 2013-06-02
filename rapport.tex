@@ -16,10 +16,21 @@
 \usepackage{geometry}
 \geometry{hmargin=2.5cm,vmargin=2.5cm}
 
-% \setmainfont[Mapping=tex-text]{Linux Libertine}
-\usepackage{libertine}
+\usepackage{fontspec}
+\setmainfont[
+    Mapping=tex-text,
+    Numbers=OldStyle,
+    Ligatures={Common}
+    ]
+    {Linux Libertine}
+% \setmainfont{Times New Roman} % Non, décidément, c’est trop moche Times…
+% \usepackage{libertine}
 % \renewcommand{\familydefault}{\sfdefault} % Pour utiliser une fonte sans empâtements (sans serif) par défaut (biolinum avec le package libertine)
+% \usepackage{fontspec}
+% \addfontfeatures{Numbers={OldStyle}}
+
 \usepackage{lipsum}
+\usepackage[final]{pdfpages}
 \usepackage[%
     hidelinks=true
     colorlinks=false
@@ -53,7 +64,8 @@
 \author{François \textsc{Chaix}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\maketitle
+\includepdf[pages=1]{pagedegarde/page.pdf}
+% \maketitle
 \tableofcontents
 
 \chapter{Introduction}
