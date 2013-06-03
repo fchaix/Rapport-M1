@@ -18,7 +18,7 @@
 \usepackage[francais]{babel}	% Pour LuaTeX
 
 \usepackage{geometry}
-\geometry{hmargin=2.5cm,vmargin=2.5cm}
+\geometry{hmargin=2.5cm,vmargin=2.3cm}
 
 \usepackage{fontspec}
 \setmainfont[
@@ -74,8 +74,10 @@
 \author{François \textsc{Chaix}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
 \includepdf[pages=1]{pagedegarde/page.pdf}
 % \maketitle
+
 \tableofcontents
 
 \chapter{Introduction}
@@ -84,11 +86,21 @@
 \chapter{Matériel et méthodes}
 \input{mm}
 
-\chapter{Résultats \& Discussion}
+\chapter{Résultats}
 \input{discussion}
 
 \printbibliography
 %\listoffigures % On va pas le mettre, ça fait un truc tout moche avec toute la caption…
+
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
+\vspace{5cm}
+\begin{itemize}
+    \item Un grand merci à Fabrice pour m'avoir accueilli dans son équipe
+    \item Merci à Hélène pour m'avoir suivi et durant ce stage, pour sa pédagogie et sa patience
+    \item Merci à toute l'équipe, pour son accueil et pour la bonne ambiance qui m'a accompagné tout le long de ce stage
+    \item \small (mention spéciale à David, pour ses tutoriaux instructifs)
+\end{itemize}
 
 \newpage
 \pagestyle{empty}
@@ -96,4 +108,23 @@
 \begin{abstract}
     \input{abstract}
 \end{abstract}
+\begin{center}
+
+\vspace{3cm}
+
+\large \textbf{Laboratoire d'accueil~:}\\
+\texttt{
+\normalsize UMR CNRS 5558 - LBBE\\
+«Biométrie et Biologie évolutive»\\
+UCB Lyon 1  - Bât. Grégor Mendel\\
+43 bd du 11 novembre 1918\\
+69622 VILLEURBANNE cedex\\
+}
+\end{center}
+\vfill
+
+\textbf{mots-clés~:}\\
+\texttt{Wolbachia, transposon, évolution, transposon-display, drosophile, endosybiose}
+
+
 \end{document}
